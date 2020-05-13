@@ -25,9 +25,5 @@ class Cat
   def self.mood
     @mood
   end
-  
-  def self.clear
-    @owner.clear
-  end
 
 end
