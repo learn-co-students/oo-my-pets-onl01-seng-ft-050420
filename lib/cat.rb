@@ -1,3 +1,5 @@
+require 'pry'
+
 class Cat
   attr_accessor :owner, :mood
   attr_reader :name
@@ -5,11 +7,11 @@ class Cat
   
   @@all = []
   
-  def initialize(name, owner, mood = "nervous")
+  def initialize(name, owner = "")
     @name = name
     @owner = owner
     @@all << self
-    @mood = mood
+    @mood = "nervous"
   end
   
   def self.all
@@ -17,7 +19,11 @@ class Cat
   end
   
   def self.owner
-    self
+    @owner
   end
   
+  def self.mood
+    @mood
+  end
+
 end
