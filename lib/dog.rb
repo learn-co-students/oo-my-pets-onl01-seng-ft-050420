@@ -7,7 +7,7 @@ class Dog
   
   @@all = []
   
-  def initialize(name, owner)
+  def initialize(name, owner = nil)
     @name = name
     @owner = owner
     @@all << self
@@ -18,8 +18,12 @@ class Dog
     @@all
   end
   
+  def self.owner
+    @owner
+  end
+  
   def self.mood
     @mood
   end
-  
+
 end

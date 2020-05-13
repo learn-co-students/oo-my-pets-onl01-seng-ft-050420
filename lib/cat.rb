@@ -7,7 +7,7 @@ class Cat
   
   @@all = []
   
-  def initialize(name, owner = "")
+  def initialize(name, owner = nil)
     @name = name
     @owner = owner
     @@all << self
@@ -24,6 +24,10 @@ class Cat
   
   def self.mood
     @mood
+  end
+  
+  def self.clear
+    @owner.clear
   end
 
 end
